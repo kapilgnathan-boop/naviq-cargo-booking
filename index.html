@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f2f4f1" />
+    <meta name="description" content="An interactive UX case study for an AI-assisted, batch-first cargo booking workspace." />
+    <title>Booking at batch scale — Naviq case study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#case-study">Skip to case study</a>
+    <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="Naviq case study home"><span class="wordmark-mark">N</span><span>NAVIQ <i>/</i> FIELD STUDY</span></a>
+      <div class="topbar-meta"><span class="availability-dot"></span> PRODUCT DESIGN ASSESSMENT <span class="topbar-divider"></span> 2026</div>
+      <a class="topbar-link" href="#presentation-narrative">Read the story <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <div class="page-grid" id="top">
+      <aside class="chapter-rail" aria-label="Case study chapters">
+        <div class="rail-heading"><span>CASE STUDY</span><span id="chapter-count">01 / 13</span></div>
+        <nav class="chapter-nav" id="chapter-nav">
+          <a href="#problem-analysis" data-chapter="problem-analysis"><span>01</span> Problem analysis</a>
+          <a href="#user-research" data-chapter="user-research"><span>02</span> User research</a>
+          <a href="#competitive-analysis" data-chapter="competitive-analysis"><span>03</span> Competitive analysis</a>
+          <a href="#design-strategy" data-chapter="design-strategy"><span>04</span> Design strategy</a>
+          <a href="#por" data-chapter="por"><span>05</span> Point of reference</a>
+          <a href="#information-architecture" data-chapter="information-architecture"><span>06</span> Information architecture</a>
+          <a href="#user-flow" data-chapter="user-flow"><span>07</span> User flow</a>
+          <a href="#detailed-wireframes" data-chapter="detailed-wireframes"><span>08</span> Detailed wireframes</a>
+          <a href="#design-system" data-chapter="design-system"><span>09</span> Design system</a>
+          <a href="#ai-integration-strategy" data-chapter="ai-integration-strategy"><span>10</span> AI integration</a>
+          <a href="#prototype-scope" data-chapter="prototype-scope"><span>11</span> Prototype scope</a>
+          <a href="#success-metrics" data-chapter="success-metrics"><span>12</span> Success metrics</a>
+          <a href="#presentation-narrative" data-chapter="presentation-narrative"><span>13</span> Presentation narrative</a>
+        </nav>
+        <div class="rail-note"><span class="rail-note-mark">i</span><p>Evidence-aware concept<br />No primary research supplied</p></div>
+      </aside>
+
+      <main id="case-study">
+        <section class="intro" aria-labelledby="page-title">
+          <div class="eyebrow"><span class="eyebrow-line"></span> UX / UI DESIGN ASSESSMENT <span class="eyebrow-slash">—</span> CARGOWISE BOOKING</div>
+          <div class="intro-grid">
+            <div>
+              <h1 id="page-title">Booking at<br /><span>batch scale.</span></h1>
+              <p class="intro-copy">Reframing repetitive air cargo booking as one reviewable, AI-assisted workspace, built around operator control.</p>
+              <div class="intro-actions"><a class="button button-dark" href="#prototype">Explore the prototype <span aria-hidden="true">↓</span></a><a class="text-link" href="#problem-analysis">Start with the problem <span aria-hidden="true">↗</span></a></div>
+            </div>
+            <div class="intro-aside">
+              <div class="case-index">CASE 01 <span> / </span> AIR CARGO</div>
+              <p>The brief describes a single-shipment-at-a-time workflow. This concept explores how a batch-first model could reduce repetition without handing decisions to AI.</p>
+              <div class="intro-stats"><div><strong>06</strong><span>prototype<br />moments</span></div><div><strong>13</strong><span>case study<br />chapters</span></div><div><strong>01</strong><span>shared batch<br />workspace</span></div></div>
+            </div>
+          </div>
+          <div class="hero-rule"><span>THE CENTRAL QUESTION</span><strong>How might we make many bookings feel like one clear, controlled task?</strong><span class="rule-index">01—13</span></div>
+        </section>
+
+        <section class="prototype-section" id="prototype" aria-labelledby="prototype-title">
+          <div class="section-kicker"><span>INTERACTIVE CONCEPT</span><span class="prototype-disclaimer">SIMULATED DATA · NO LIVE CARGOWISE CONNECTION</span></div>
+          <div class="prototype-heading"><div><span class="section-number">↳ 00</span><h2 id="prototype-title">The booking workspace</h2></div><p>Move through the proposed workflow. Every shipment and result below is illustrative.</p></div>
+          <div class="prototype-frame">
+            <div class="prototype-topline"><div class="product-brand"><span class="product-mark">C</span><span>Cargo operations <small>BOOKING WORKSPACE</small></span></div><div class="prototype-batch-label"><span class="live-dot"></span> DEMO BATCH <span class="batch-id">#EX-2048</span></div><button class="reset-button" id="reset-prototype" type="button">Reset demo</button></div>
+            <div class="prototype-progress" id="prototype-progress" role="tablist" aria-label="Prototype workflow screens"></div>
+            <div class="prototype-body" id="prototype-body" aria-live="polite"></div>
+            <div class="prototype-footer"><span id="prototype-status">CONCEPT PROTOTYPE · SYNTHETIC SHIPMENT DATA</span><div><button id="prototype-back" class="step-button" type="button" aria-label="Previous prototype screen">← Back</button><button id="prototype-next" class="step-button step-button-next" type="button">Continue <span aria-hidden="true">→</span></button></div></div>
+          </div>
+          <div class="prototype-caption"><span>PROTOTYPE NOTE</span><p>This is a behavior sketch, not a production booking tool. “AI” actions are represented by deterministic sample states so the review and control model can be explored.</p></div>
+        </section>
+
+        <section class="chapter" id="problem-analysis" data-section="01">
+          <div class="chapter-head"><span class="chapter-index">01 / FRAME THE CHALLENGE</span><span class="evidence-tag">BRIEF-PROVIDED</span></div>
+          <h2>One shipment at a time<br />doesn’t scale.</h2>
+          <p class="chapter-lede">The assessment frames booking as a repetitive, error-prone task with rising cognitive load as shipment volume grows. The design opportunity is to shift the unit of work from an individual AWB to a batch that remains inspectable.</p>
+          <div class="problem-layout">
+            <div class="problem-quote"><span>THE PROBLEM AS STATED</span><blockquote>“Users manually create and manage multiple AWB shipments one at a time.”</blockquote><small>Source: supplied assessment brief</small></div>
+            <div class="problem-list"><div><span class="problem-symbol">01</span><div><strong>Repetition compounds</strong><p>Repeated shipment details are re-entered instead of reused.</p></div></div><div><span class="problem-symbol">02</span><div><strong>Errors hide in the handoffs</strong><p>More manual fields create more opportunities for omissions and inconsistencies.</p></div></div><div><span class="problem-symbol">03</span><div><strong>Scale adds cognitive load</strong><p>Operators must track progress and exceptions across separate bookings.</p></div></div></div>
+          </div>
+          <div class="hypothesis-strip"><span>DESIGN HYPOTHESIS</span><p>If operators can create, compare, edit, and validate a batch in one workspace, repetitive effort and avoidable rework may decrease. Both claims need baseline research and usability testing.</p></div>
+        </section>
+
+        <section class="chapter" id="user-research" data-section="02">
+          <div class="chapter-head"><span class="chapter-index">02 / LEARN BEFORE LOCKING</span><span class="evidence-tag evidence-tag-outline">RESEARCH PLAN · NOT CONDUCTED</span></div>
+          <h2>Start with the work,<br />not the AI.</h2>
+          <p class="chapter-lede">No interviews, observation, or usage data were included in the brief. The following is a focused discovery plan, not a report of findings.</p>
+          <div class="research-grid"><article class="research-card research-card-accent"><span class="card-label">RESEARCH QUESTIONS</span><ol><li>Which shipment fields repeat within and across batches?</li><li>Where do operators pause, cross-check, or re-enter information?</li><li>What must be true before a booking is safe to submit?</li><li>How are exceptions assigned and resolved today?</li></ol></article><article class="research-card"><span class="card-label">PROPOSED METHODS</span><div class="method-row"><strong>01</strong><p><b>Contextual inquiry</b><br />Observe a booking task from source documents to confirmation.</p></div><div class="method-row"><strong>02</strong><p><b>Artifact walkthrough</b><br />Map real forms, templates, spreadsheets, and handoffs.</p></div><div class="method-row"><strong>03</strong><p><b>Concept evaluation</b><br />Test batch review, exception handling, and AI suggestion controls.</p></div></article></div>
+          <div class="research-footer"><span>PROPOSED PARTICIPANTS</span><p>Booking operators, team leads, and a compliance or operations stakeholder. Recruit across experience levels and booking patterns; determine sample size with the study scope.</p><span class="pending-pill">RECRUITMENT PENDING</span></div>
+        </section>
+
+        <section class="chapter" id="competitive-analysis" data-section="03">
+          <div class="chapter-head"><span class="chapter-index">03 / MAP THE ALTERNATIVES</span><span class="evidence-tag evidence-tag-outline">DESK RESEARCH PENDING</span></div>
+          <h2>Compare the job,<br />not just the screens.</h2>
+          <p class="chapter-lede">The brief provides no competitor references or verified product capabilities. This analysis defines what to benchmark before making a comparative claim.</p>
+          <div class="comparison-table" role="table" aria-label="Competitive analysis research framework"><div class="comparison-row comparison-head" role="row"><span role="columnheader">REFERENCE TO STUDY</span><span role="columnheader">QUESTIONS TO VERIFY</span><span role="columnheader">EVIDENCE STATUS</span></div><div class="comparison-row" role="row"><strong>CargoWise current workflow</strong><p>How are AWBs created, duplicated, checked, and submitted in the target configuration?</p><span class="status-pending">ACCESS NEEDED</span></div><div class="comparison-row" role="row"><strong>Freight TMS products</strong><p>Do they support batch creation, shared data, exception queues, and audit history?</p><span class="status-pending">BENCHMARK NEEDED</span></div><div class="comparison-row" role="row"><strong>Airline cargo portals</strong><p>How do booking availability, flight options, and shipment changes appear?</p><span class="status-pending">BENCHMARK NEEDED</span></div><div class="comparison-row" role="row"><strong>Spreadsheet + email workarounds</strong><p>Which tasks move outside the system, and where does reconciliation happen?</p><span class="status-pending">FIELD STUDY NEEDED</span></div></div>
+          <p class="table-footnote">Next step: collect dated product documentation or conduct a task-based walkthrough. Do not treat absence of evidence here as absence of a feature.</p>
+        </section>
+
+        <section class="chapter" id="design-strategy" data-section="04">
+          <div class="chapter-head"><span class="chapter-index">04 / MAKE THE PRINCIPLES TANGIBLE</span><span class="evidence-tag">FROM THE BRIEF</span></div>
+          <h2>Assist the operator.<br />Keep the operator in charge.</h2>
+          <p class="chapter-lede">Five principles from the brief become concrete interaction commitments in the proposed workspace.</p>
+          <div class="strategy-list"><div class="strategy-row"><span class="strategy-number">01</span><div><h3>AI-assisted, not AI-driven</h3><p>Show source, confidence, and impact for suggestions. Require review before a consequential change.</p></div><span class="strategy-outcome">VISIBLE CONTROL</span></div><div class="strategy-row"><span class="strategy-number">02</span><div><h3>Bulk first</h3><p>Start from a batch, share repeated data, and let operators apply an edit to selected AWBs.</p></div><span class="strategy-outcome">LESS REPETITION</span></div><div class="strategy-row"><span class="strategy-number">03</span><div><h3>Progressive disclosure</h3><p>Keep batch health and next actions visible; reveal shipment-level detail when needed.</p></div><span class="strategy-outcome">LOWER LOAD</span></div><div class="strategy-row"><span class="strategy-number">04</span><div><h3>Real-time validation</h3><p>Attach issues to a specific field and row, with a clear path to fix or review.</p></div><span class="strategy-outcome">EARLIER FEEDBACK</span></div><div class="strategy-row"><span class="strategy-number">05</span><div><h3>Template reusability</h3><p>Let operators reuse known patterns while reviewing what carries over to each shipment.</p></div><span class="strategy-outcome">REPEATABLE WORK</span></div></div>
+        </section>
+
+        <section class="chapter" id="por" data-section="05">
+          <div class="chapter-head"><span class="chapter-index">05 / POINT OF REFERENCE</span><span class="evidence-tag">DESIGN FRAME</span></div>
+          <h2>Turn the opportunity<br />into a design reference.</h2>
+          <p class="chapter-lede">Here, POR means Point of Reference for Designing the Solution. It translates the stated problem into a testable direction, not a claim that the current product behaves in a particular way.</p>
+          <div class="por-layout"><div class="por-statement"><span>THE REFERENCE POINT</span><p>One batch is the operator’s working context; every AWB remains individually reviewable, editable, and accountable.</p><div class="por-flow"><span>SHARED INPUT</span><i>→</i><span>REVIEWABLE AWBS</span><i>→</i><span>CONTROLLED SUBMISSION</span></div></div><div class="por-criteria"><div><span>A</span><p><b>Reuse</b><br />Carry common details forward without hiding their origin.</p></div><div><span>B</span><p><b>Compare</b><br />See differences and exceptions across the batch.</p></div><div><span>C</span><p><b>Decide</b><br />Accept, edit, or reject AI suggestions before submission.</p></div><div><span>D</span><p><b>Trace</b><br />Know what changed, who reviewed it, and what remains.</p></div></div></div>
+        </section>
+
+        <section class="chapter" id="information-architecture" data-section="06">
+          <div class="chapter-head"><span class="chapter-index">06 / ORGANIZE THE WORK</span><span class="evidence-tag">PROPOSED STRUCTURE</span></div>
+          <h2>One batch.<br />Clear levels of detail.</h2>
+          <p class="chapter-lede">The information model keeps batch-level context and AWB-level accountability side by side.</p>
+          <div class="ia-board"><div class="ia-root"><span class="ia-type">BATCH</span><strong>Export batch</strong><small>Owner · reference · status · shared defaults</small></div><div class="ia-branches"><article><span class="ia-type">GROUP</span><strong>Shared booking</strong><small>Route · requested date · template · source documents</small><div class="ia-leaf"><span>AWB 001</span><small>Consignee · pieces · weight · dimensions</small></div><div class="ia-leaf"><span>AWB 002</span><small>Consignee · pieces · weight · dimensions</small></div></article><article><span class="ia-type">WORK QUEUE</span><strong>Validation &amp; review</strong><small>Blockers · warnings · suggested fixes · reviewer</small><div class="ia-leaf ia-leaf-action"><span>Submission status</span><small>Ready · submitted · confirmation reference</small></div></article></div></div>
+          <div class="ia-legend"><span><i class="legend-square legend-batch"></i>Batch context</span><span><i class="legend-square legend-shipment"></i>Shipment data</span><span><i class="legend-square legend-exception"></i>Review state</span></div>
+        </section>
+
+        <section class="chapter" id="user-flow" data-section="07">
+          <div class="chapter-head"><span class="chapter-index">07 / SHOW THE DECISIONS</span><span class="evidence-tag">PROPOSED FLOW</span></div>
+          <h2>Make the safe path<br />the obvious path.</h2>
+          <p class="chapter-lede">The flow separates generation from approval and makes validation an explicit checkpoint before submission.</p>
+          <div class="flow-track"><div class="flow-node flow-node-start"><span>01</span><b>Describe batch</b><small>Prompt + shared inputs</small></div><i class="flow-arrow">→</i><div class="flow-node"><span>02</span><b>Review summary</b><small>Confirm extracted details</small></div><i class="flow-arrow">→</i><div class="flow-node"><span>03</span><b>Inspect AWBs</b><small>Edit one or many</small></div><i class="flow-arrow">→</i><div class="flow-node flow-node-check"><span>04</span><b>Validate</b><small>Resolve blockers</small></div><i class="flow-arrow">→</i><div class="flow-node flow-node-end"><span>05</span><b>Submit batch</b><small>Review outcome</small></div></div>
+          <div class="flow-branches"><div><span>IF DETAILS ARE WRONG</span><p>Return to the relevant field or AWB. Preserve accepted data and make the change visible.</p></div><div><span>IF AI IS UNCERTAIN</span><p>Ask for confirmation or leave the field unresolved; never silently promote a guess into a booking fact.</p></div><div><span>IF A BLOCKER REMAINS</span><p>Keep submission disabled and link each issue to an actionable fix.</p></div></div>
+        </section>
+
+        <section class="chapter" id="detailed-wireframes" data-section="08">
+          <div class="chapter-head"><span class="chapter-index">08 / DETAIL THE EXPERIENCE</span><span class="evidence-tag">SIX KEY SCREENS</span></div>
+          <h2>From intake to<br />a confirmed batch.</h2>
+          <p class="chapter-lede">The prototype above makes the screens explorable. These wireframe notes clarify the job each view must do.</p>
+          <div class="wireframe-grid"><article><span>01 / INPUT</span><h3>AI Booking Entry</h3><p>Capture a plain-language request and shared constraints. Keep the source input editable.</p><button data-jump-stage="0" type="button">Open screen <span>↗</span></button></article><article><span>02 / REVIEW</span><h3>AI Generated Summary</h3><p>Show parsed batch details and the number of draft AWBs before creating the workspace.</p><button data-jump-stage="1" type="button">Open screen <span>↗</span></button></article><article><span>03 / WORK</span><h3>Booking Workspace</h3><p>Compare AWBs, select rows, inspect status, and make batch-level edits without losing row context.</p><button data-jump-stage="2" type="button">Open screen <span>↗</span></button></article><article><span>04 / EDIT</span><h3>Bulk Edit Modal</h3><p>Confirm the selection and affected fields before applying a change. Make scope explicit.</p><button data-jump-stage="3" type="button">Open screen <span>↗</span></button></article><article><span>05 / CHECK</span><h3>Validation Center</h3><p>Separate blocking issues from warnings; connect each issue to the shipment and field that needs attention.</p><button data-jump-stage="4" type="button">Open screen <span>↗</span></button></article><article><span>06 / COMPLETE</span><h3>Success Dashboard</h3><p>Confirm the submitted count and provide a clear reference and next action.</p><button data-jump-stage="5" type="button">Open screen <span>↗</span></button></article></div>
+        </section>
+
+        <section class="chapter" id="design-system" data-section="09">
+          <div class="chapter-head"><span class="chapter-index">09 / BUILD CONSISTENCY</span><span class="evidence-tag">PROPOSED TOKENS</span></div>
+          <h2>Quiet structure.<br />Unmistakable status.</h2>
+          <p class="chapter-lede">A compact system supports dense operational data without making every state compete for attention. The grid values below come from the supplied brief; the visual tokens are proposed for this concept.</p>
+          <div class="system-board"><div class="system-column"><span class="card-label">LAYOUT / FROM BRIEF</span><div class="layout-spec"><strong>1440</strong><span>desktop frame</span></div><div class="layout-spec"><strong>12</strong><span>column grid</span></div><div class="layout-spec"><strong>24 / 80</strong><span>gutter / margin px</span></div><div class="grid-mini" aria-label="Illustration of a twelve column grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="system-column"><span class="card-label">COLOR / PROPOSED</span><div class="swatches"><div><i style="--swatch:#1d2b28"></i><span>Ink<br /><small>#1D2B28</small></span></div><div><i style="--swatch:#f2f4f1"></i><span>Canvas<br /><small>#F2F4F1</small></span></div><div><i style="--swatch:#d6f36a"></i><span>Signal<br /><small>#D6F36A</small></span></div><div><i style="--swatch:#d96d43"></i><span>Attention<br /><small>#D96D43</small></span></div><div><i style="--swatch:#25866d"></i><span>Ready<br /><small>#25866D</small></span></div></div></div><div class="system-column"><span class="card-label">COMPONENTS / PROPOSED</span><div class="component-list"><span>Input + prompt field</span><span>AWB row + status</span><span>Flight suggestion</span><span>Bulk edit dialog</span><span>Validation item</span><span>Batch summary</span></div></div></div>
+          <div class="type-specimen"><span class="card-label">TYPE PAIRING</span><div><strong>Operational clarity</strong><small>DM Sans / sentence case / readable at dense sizes</small></div><code>AWB · FLIGHT · STATUS / IBM PLEX MONO</code></div>
+        </section>
+
+        <section class="chapter" id="ai-integration-strategy" data-section="10">
+          <div class="chapter-head"><span class="chapter-index">10 / PLACE AI WITH CARE</span><span class="evidence-tag">CONCEPT STRATEGY</span></div>
+          <h2>Suggest. Explain.<br />Wait for approval.</h2>
+          <p class="chapter-lede">AI is proposed for bounded assistance. The concept does not assume a model, integration, or accuracy level; those require technical and operational validation.</p>
+          <div class="ai-table"><div class="ai-row ai-head"><span>ASSISTANCE POINT</span><span>AI MAY PROPOSE</span><span>OPERATOR CONTROL</span></div><div class="ai-row"><strong>Request intake</strong><p>Extract candidate fields from typed instructions or provided documents.</p><p>Review source and correct each field before generation.</p></div><div class="ai-row"><strong>Repeated data</strong><p>Suggest reuse from an approved template or sibling AWB.</p><p>See what was copied, change its scope, or opt out.</p></div><div class="ai-row"><strong>Flight selection</strong><p>Rank eligible options against entered constraints, if data is available.</p><p>Inspect rationale and choose a different option.</p></div><div class="ai-row"><strong>Validation</strong><p>Flag missing, inconsistent, or uncertain values.</p><p>Resolve, dismiss with reason, or escalate; never silently submit.</p></div></div>
+          <div class="guardrail-bar"><span>NON-NEGOTIABLE GUARDRAILS</span><p>Show uncertainty · preserve source context · log edits and approvals · require human approval for booking submission · fail visibly when data is unavailable.</p></div>
+        </section>
+
+        <section class="chapter" id="prototype-scope" data-section="11">
+          <div class="chapter-head"><span class="chapter-index">11 / DEFINE WHAT IS REAL</span><span class="evidence-tag evidence-tag-outline">PROTOTYPE BOUNDARY</span></div>
+          <h2>Test the interaction,<br />not the integration.</h2>
+          <p class="chapter-lede">The click-through is designed to evaluate comprehension and control across the batch workflow. It is deliberately not a technical proof of AI or system connectivity.</p>
+          <div class="scope-columns"><div class="scope-in"><span>IN SCOPE</span><ul><li>Six screen-to-screen transitions</li><li>Illustrative batch, AWB, and validation states</li><li>Selecting rows and applying a bulk edit</li><li>Resolving sample validation blockers</li><li>Reviewing a simulated submission outcome</li><li>Responsive, keyboard-accessible navigation</li></ul></div><div class="scope-out"><span>OUT OF SCOPE</span><ul><li>Live CargoWise APIs or authentication</li><li>Real AWB creation or airline inventory</li><li>Document upload, OCR, or language model calls</li><li>Operational compliance or security assurance</li><li>Measured time savings or accuracy claims</li><li>Production persistence or audit logging</li></ul></div></div>
+        </section>
+
+        <section class="chapter" id="success-metrics" data-section="12">
+          <div class="chapter-head"><span class="chapter-index">12 / MEASURE THE OUTCOME</span><span class="evidence-tag evidence-tag-outline">BASELINES PENDING</span></div>
+          <h2>Measure effort and<br />accuracy together.</h2>
+          <p class="chapter-lede">The brief names desired outcomes but provides no baseline or observed results. Define the measures first; compare the current workflow with the proposed one under equivalent tasks.</p>
+          <div class="metrics-grid"><article><span>01 / EFFICIENCY</span><h3>Time to booking-ready</h3><p>Median elapsed time from task start to a fully validated batch.</p><small>BASELINE: TO COLLECT</small></article><article><span>02 / QUALITY</span><h3>First-pass completeness</h3><p>Share of AWBs submitted without a preventable missing-field correction.</p><small>BASELINE: TO COLLECT</small></article><article><span>03 / EFFORT</span><h3>Repeated entries per batch</h3><p>Count of manually re-entered values that could be reused safely.</p><small>BASELINE: TO COLLECT</small></article><article><span>04 / REWORK</span><h3>Validation rework rate</h3><p>Share of batches returned for correction after an initial review.</p><small>BASELINE: TO COLLECT</small></article><article><span>05 / TRUST</span><h3>Suggestion review quality</h3><p>Acceptance, edit, and rejection rates, paired with error checks.</p><small>INSTRUMENTATION NEEDED</small></article><article><span>06 / SAFETY</span><h3>Submission reversals</h3><p>Bookings amended or cancelled due to incorrect submitted details.</p><small>FOLLOW-UP DATA NEEDED</small></article></div>
+          <div class="metric-caveat"><b>Success is not speed alone.</b> Pair time and repetition measures with error severity, operator confidence, and any downstream rework. Define guardrail thresholds with operations before launch.</div>
+        </section>
+
+        <section class="chapter narrative-chapter" id="presentation-narrative" data-section="13">
+          <div class="chapter-head"><span class="chapter-index">13 / TELL THE STORY</span><span class="evidence-tag">INTERVIEW NARRATIVE</span></div>
+          <h2>From repetitive work<br />to a reviewable batch.</h2>
+          <p class="chapter-lede">A concise presentation arc for walking an interviewer through the reasoning, the prototype, and what still needs to be proven.</p>
+          <div class="narrative-list"><div><span>01</span><p><b>Set the context.</b> The assessment describes operators creating multiple AWBs one at a time.</p></div><div><span>02</span><p><b>Name the opportunity.</b> Treat a related group of bookings as one working batch, without hiding shipment-level differences.</p></div><div><span>03</span><p><b>Show the strategy.</b> Reuse repeated details, make exceptions visible, and keep AI suggestions reviewable.</p></div><div><span>04</span><p><b>Walk the workflow.</b> Generate drafts, inspect the batch, bulk edit, resolve validation, and review the outcome.</p></div><div><span>05</span><p><b>Explain the boundary.</b> This prototype demonstrates interaction logic with synthetic data; it does not connect to CargoWise or use a live AI model.</p></div><div><span>06</span><p><b>Close with the next proof.</b> Observe real booking work, benchmark alternatives, and test the concept against a measured baseline.</p></div></div>
+          <div class="closing-callout"><span>THE DESIGN INTENT</span><p>Make the batch easier to move through, while making every individual booking easier to trust.</p><a href="#prototype" class="button button-lime">Return to the prototype <span aria-hidden="true">↑</span></a></div>
+        </section>
+
+        <footer class="site-footer"><span>NAVIQ / CASE STUDY 01</span><span>AI-ASSISTED CARGO BOOKING EXPERIENCE</span><a href="#top">Back to top ↑</a></footer>
+      </main>
+    </div>
+  </body>
+</html>
